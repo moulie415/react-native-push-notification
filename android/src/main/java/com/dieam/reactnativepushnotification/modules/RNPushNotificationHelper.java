@@ -47,7 +47,8 @@ import static com.dieam.reactnativepushnotification.modules.RNPushNotificationAt
 
 public class RNPushNotificationHelper {
     public static final String PREFERENCES_KEY = "rn_push_notification";
-    private static final long DEFAULT_VIBRATION = 300L;
+    private static final long 
+        _VIBRATION = 300L;
     private static final String NOTIFICATION_CHANNEL_ID = "rn-push-notification-channel-id";
 
     private Context context;
@@ -696,8 +697,8 @@ public class RNPushNotificationHelper {
       checkOrCreateChannel(manager, channel_id_sound, soundUri, importance, new long[] {0, DEFAULT_VIBRATION});
 
       // Instanciate a default channel without sound defined for backward compatibility.
-      String channel_id_no_sound = NOTIFICATION_CHANNEL_ID + "-" + importance + "-" + DEFAULT_VIBRATION;
-      checkOrCreateChannel(manager, channel_id_no_sound, null, importance, new long[] {0, DEFAULT_VIBRATION});
+      //String channel_id_no_sound = NOTIFICATION_CHANNEL_ID + "-" + importance + "-" + DEFAULT_VIBRATION;
+      //checkOrCreateChannel(manager, channel_id_no_sound, null, importance, new long[] {0, DEFAULT_VIBRATION});
     }
 
     private void checkOrCreateChannel(NotificationManager manager, String channel_id, Uri soundUri, int importance, long[] vibratePattern) {
